@@ -13,15 +13,12 @@ function Count_Inversions(arr) {
 function Merge_And_Count_Inversions(left, right) {
     var inversions = 0;
     var result = [];
-    var index = 0
     while(left.length > 0 && right.length > 0) {
         if ((left[0]) <= (right[0])) {
             result.push(left.shift());
-            index++;
         } else {
             inversions += left.length;
             result.push(right.shift());
-            index++;
         }
     }
     while(left.length > 0) {
